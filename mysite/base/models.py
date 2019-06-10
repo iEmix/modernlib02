@@ -56,4 +56,58 @@ class Reklamacje(models.Model):
     reklamacja_date = models.DateTimeField('data reklamacji')
     status_reklamacji = models.IntegerField()
     decyzja = models.IntegerField()
+	
+	
+class Sportowe(models.Model):
+    class Meta:
+        verbose_name = "Sportowe"
+        verbose_name_plural = "Sportowe"
+    id = models.IntegerField(primary_key=True)
+    nazwa = models.CharField(max_length=250)
+    wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
+    pub_date = models.DateTimeField('data wydania')
 
+
+class Historyczne(models.Model):
+    class Meta:
+        verbose_name = "Historyczne"
+        verbose_name_plural = "Historyczne"
+    id = models.IntegerField(primary_key=True)
+    nazwa = models.CharField(max_length=250)
+    wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
+    pub_date = models.DateTimeField('data wydania')
+
+
+class Przygodowe(models.Model):
+    class Meta:
+        verbose_name = "Przygodowe"
+        verbose_name_plural = "Przygodowe"
+    id = models.IntegerField(primary_key=True)
+    nazwa = models.CharField(max_length=250)
+    wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
+    pub_date = models.DateTimeField('data wydania')
+
+
+class Naukowe(models.Model):
+    class Meta:
+        verbose_name = "Naukowe"
+        verbose_name_plural = "Naukowe"
+    id = models.IntegerField(primary_key=True)
+    nazwa = models.CharField(max_length=250)
+    wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
+    pub_date = models.DateTimeField('data wydania')
+	
+
+class Fantasty(models.Model):
+    class Meta:
+        verbose_name = "Fantast"
+        verbose_name_plural = "Fantasty"
+    id = models.IntegerField(primary_key=True)
+    nazwa = models.CharField(max_length=250)
+    wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
+    pub_date = models.DateTimeField('data wydania')
