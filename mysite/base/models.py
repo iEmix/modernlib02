@@ -25,16 +25,18 @@ class Autorzy(models.Model):
     email = models.EmailField()
     numerkontaktowy = models.IntegerField()
 
-class ksiazki(models.Model):
+class Inne(models.Model):
     class Meta:
-        verbose_name = "Ksiazka"
-        verbose_name_plural = "Ksiazki"
+        verbose_name = "Inna"
+        verbose_name_plural = "Inne"
     idksiazki = models.IntegerField()
     nazwa = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     nrkontakowy = models.IntegerField()
     wydawca = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
 
 class Zamowienia(models.Model):
     class Meta:
@@ -56,8 +58,8 @@ class Reklamacje(models.Model):
     reklamacja_date = models.DateTimeField('data reklamacji')
     status_reklamacji = models.IntegerField()
     decyzja = models.IntegerField()
-	
-	
+
+
 class Sportowe(models.Model):
     class Meta:
         verbose_name = "Sportowe"
@@ -67,6 +69,8 @@ class Sportowe(models.Model):
     wydawca = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
 
 
 class Historyczne(models.Model):
@@ -78,6 +82,8 @@ class Historyczne(models.Model):
     wydawca = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
 
 
 class Przygodowe(models.Model):
@@ -89,6 +95,8 @@ class Przygodowe(models.Model):
     wydawca = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
 
 
 class Naukowe(models.Model):
@@ -100,6 +108,8 @@ class Naukowe(models.Model):
     wydawca = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
 	
 
 class Fantasty(models.Model):
@@ -111,3 +121,5 @@ class Fantasty(models.Model):
     wydawca = models.CharField(max_length=250)
     ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
+    def __str__(self):
+        return self.nazwa
