@@ -47,6 +47,18 @@ body
 	padding-top: 10px;
 	font-size: 22px;
 }
+.contenta
+{
+	padding-top: 20px;
+	width: 50%;
+	float: left;
+	
+}
+.contentb
+{
+	width: 50%;
+	float: left;
+}
 
 .socials
 {
