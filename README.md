@@ -11,3 +11,4 @@ Version 0.2.
 Od dnia 15.06.2019 jest to Wersja 0.3
 Od dnia 16.06.2019 jest to Wersja 0.4 (Dodano szablon pod kategorie).
 Od dnia 16.06.2019 jest to Wersja 0.5 (Dodano Komentarze facebook).
+Od dnia 17.06.2019 jest to Wersja 0.6 (Dodano formularz kontakt).
