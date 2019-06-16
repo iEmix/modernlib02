@@ -15,5 +15,5 @@ urlpatterns = [
     path('naukowe/', views.naukowe, name='naukowe'),
     path('fantasty/', views.fantasty, name='fantasty'),
     path('inne/', views.inne, name='inne'),
- 
+    path('komentarze/', views.komentarze, name='komentarze'),
 ]

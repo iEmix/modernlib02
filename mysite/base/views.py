@@ -11,6 +11,8 @@ def kontakt(request):
     return render(request, 'kontakt.html')
 def kategorie(request):
     return render(request, 'kategorie.html')
+def komentarze(request):
+    return render(request, 'komentarze.html')
 def sportowe(request):
     return render(request, 'sportowe.html', {'Sportowe': Sportowe.objects.all()})
 def historyczne(request):

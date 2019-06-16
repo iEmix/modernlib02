@@ -29,5 +29,6 @@ urlpatterns = [
     path('naukowe/', include('base.urls')),
     path('fantasty/', include('base.urls')),
     path('inne/', include('base.urls')),
+    path('komentarze/', include('base.urls')),
     path('admin/', admin.site.urls),
 ]
