@@ -6,7 +6,7 @@ class Uzytkownicy (models.Model):
     class Meta:
         verbose_name = "Użytkownik"
         verbose_name_plural = "Użytkownicy"
-    iduzytkownika = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     typ = models.IntegerField()
     imie = models.CharField(max_length=250)
     nazwisko = models.CharField(max_length=250)
@@ -19,7 +19,7 @@ class Autorzy(models.Model):
     class Meta:
         verbose_name = "Autor"
         verbose_name_plural = "Autorzy"
-    idautora = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     imie = models.CharField(max_length=250)
     nazwisko = models.CharField(max_length=250)
     email = models.EmailField()
@@ -29,11 +29,10 @@ class Inne(models.Model):
     class Meta:
         verbose_name = "Inna"
         verbose_name_plural = "Inne"
-    idksiazki = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     nazwa = models.CharField(max_length=250)
-    ilosc = models.CharField(max_length=250)
-    nrkontakowy = models.IntegerField()
     wydawca = models.CharField(max_length=250)
+    ilosc = models.CharField(max_length=250)
     pub_date = models.DateTimeField('data wydania')
     def __str__(self):
         return self.nazwa
@@ -42,7 +41,7 @@ class Zamowienia(models.Model):
     class Meta:
         verbose_name = "Zamowienie"
         verbose_name_plural = "Zamowienia"
-    idzamowienia = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     idrodzaj = models.IntegerField()
     datasprzedazy = models.CharField(max_length=250)
     status = models.CharField(max_length=250)
@@ -54,7 +53,7 @@ class Reklamacje(models.Model):
     class Meta:
         verbose_name = "Reklamacja"
         verbose_name_plural = "Reklamacje"
-    idreklamacji = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     reklamacja_date = models.DateTimeField('data reklamacji')
     status_reklamacji = models.IntegerField()
     decyzja = models.IntegerField()

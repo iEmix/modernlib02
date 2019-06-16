@@ -23,6 +23,11 @@ urlpatterns = [
     path('index/', include('base.urls')),
     path('kontakt/', include('base.urls')),
     path('regulamin/', include('base.urls')),
-    path('test/', include('base.urls')),
+    path('sportowe/', include('base.urls')),
+    path('historyczne/', include('base.urls')),
+    path('przygodowe/', include('base.urls')),
+    path('naukowe/', include('base.urls')),
+    path('fantasty/', include('base.urls')),
+    path('inne/', include('base.urls')),
     path('admin/', admin.site.urls),
 ]
